@@ -7,7 +7,7 @@ class Node {
 
 //nodo1=new Node(nodo);
 
-class SinglyLinkedList {
+class LinkedList {
 
     constructor() {
         this.head = null;
@@ -59,22 +59,22 @@ class SinglyLinkedList {
     }
 
     toString() {
-        let x = this.head;
-        while (x != null) {
-            console.log(x);
-            x = x.next;
+        let result = this.head;
+        while (result != null) {
+            console.log(result);
+            result = result.next;
         }
 
     }
 
 }
 
-let list1 = new SinglyLinkedList();
-list1.insertTail(1);
-list1.insertTail(2);
-list1.insertHead(0);
-console.log(list1.size());
-console.log(list1.toString());
-list1.deleteHead();
-console.log(list1.toString());
-console.log(list1.size());
+let lista = new LinkedList();
+lista.insertTail(1);
+lista.insertTail(2);
+lista.insertHead(0);
+console.log(lista.size());
+console.log(lista.toString());
+lista.deleteHead();
+console.log(lista.toString());
+console.log(lista.size());

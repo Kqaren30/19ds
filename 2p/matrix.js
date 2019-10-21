@@ -95,12 +95,16 @@ class Matrix {
 }
 
 matriz = new Matrix(5, 6);
-matriz2= new Matrix(2,2);
-console.log(matriz2.isIdentity())
-console.log(matriz.isIdentity())
 console.log(matriz.initRandom());
+console.log(matriz.isSquared());
+console.log(matriz.isSymmetric());
+console.log(matriz.isIdentity())
 console.log(matriz.getRow(4));
 console.log(matriz.getCol(2));
+matriz2= new Matrix(2,2);
+console.log(matriz2.initRandom());
 console.log(matriz2.isSquared());
-console.log(matriz.isSquared());
-console.log(matriz.isSquared());
+console.log(matriz2.isSymmetric());
+console.log(matriz2.isIdentity())
+console.log(matriz2.getRow(4));
+console.log(matriz2.getCol(2));

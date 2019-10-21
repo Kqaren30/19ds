@@ -17,7 +17,6 @@ class Calendario {
             }
         }
         let x = this.firstDay(anio);
-        // Numero de dias y el inicio del mes dependiendo del mes y de si es año bisiesto o no
         if (this.isleapYear(anio)) {
             if (mes == 2) {
                 dias = 29;
@@ -87,7 +86,7 @@ class Calendario {
                 }
             } else {
                 for (let j = 0; j < 7; j++) {
-                    //Llenado de la matriz con un contador del 1 hasta el # de días del mes
+
                     if (cont <= dias) {
                         calendar[i][j] = cont;
                         cont++;
@@ -156,6 +155,8 @@ class Calendario {
         return ((anio % 4 == 0 && anio % 100 != 0) || anio % 400 == 0) ? true : false;
     }
 
+    //METODO EXTRA
+
     friday13(anio) {
         let count = 0;
         for (let month = 0; month < 12; month++) {
@@ -177,8 +178,8 @@ class Calendario {
 
 
 nuevoDia = new Calendario();
-console.log(nuevoDia.printCalendar(4,2019));
-console.log(nuevoDia.todayPlus("martes", 3));
-console.log(nuevoDia.friday13(2015));
-console.log(nuevoDia.firstDay(2072));
-console.log(nuevoDia.isleapYear(2010));
+console.log(nuevoDia.printCalendar(4, 2019));
+console.log(nuevoDia.todayPlus("martes", 3));//5
+console.log(nuevoDia.friday13(2015));//METODO EXTRA=5
+console.log(nuevoDia.firstDay(2072));//3
+console.log(nuevoDia.isleapYear(2010));//false
